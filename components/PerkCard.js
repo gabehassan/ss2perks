@@ -48,9 +48,13 @@ function PerkCard({ perk, level, onAdd }) {
     }
   }, [perk.id, isMaxed, onAdd]);
 
-  // Description: first line of level 1 description
-  const desc = perk.descriptionValues?.["1"] || "";
-  const firstLine = desc.split("|")[0].trim();
+  // Description: full level 1 description, cleaned up
+  const rawDesc = perk.descriptionValues?.["1"] || "";
+  const firstLine = rawDesc
+    .replace(/\s*\|\s*/g, " · ")
+    .replace(/__/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
   // Stat preview: show what this perk does at next applicable level
   const previewLevel = isInBuild ? Math.min(level + 1, perk.maxLevel) : 1;

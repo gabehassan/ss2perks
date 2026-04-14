@@ -44,8 +44,12 @@ function BuildPerkCard({ perk, level, onRemove, onSetLevel }) {
   );
 
   // Description at current level
-  const desc = perk.descriptionValues?.[String(level)] || perk.descriptionValues?.["1"] || "";
-  const descLines = desc.split("|").map((s) => s.trim()).join(" \u2022 ");
+  const rawDesc = perk.descriptionValues?.[String(level)] || perk.descriptionValues?.["1"] || "";
+  const descLines = rawDesc
+    .replace(/\s*\|\s*/g, " · ")
+    .replace(/__/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 
   // Stat effects at current level
   const modEffects = [];
