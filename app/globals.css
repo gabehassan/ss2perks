@@ -34,7 +34,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
 }
@@ -106,19 +106,19 @@ body {
 }
 
 .panel-left {
-  width: 380px;
+  flex: 5;
   min-width: 300px;
 }
 
 .panel-center {
-  width: 340px;
-  min-width: 280px;
+  flex: 3;
+  min-width: 260px;
   border-right: 1px solid var(--border);
 }
 
 .panel-right {
-  flex: 1;
-  min-width: 300px;
+  flex: 3;
+  min-width: 280px;
   border-right: none;
 }
 
@@ -223,16 +223,17 @@ body {
 /* Perk Grid */
 .perk-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
 }
 
 /* Perk Card (Browser) */
 .perk-card {
   background: #151515;
   border: 1px solid var(--border);
+  border-left-width: 3px;
   border-radius: 5px;
-  padding: 8px;
+  padding: 6px 7px;
   cursor: pointer;
   transition: all 0.15s;
   position: relative;
@@ -257,8 +258,8 @@ body {
 }
 
 .perk-icon {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 4px;
   flex-shrink: 0;
   image-rendering: pixelated;
@@ -266,14 +267,14 @@ body {
 }
 
 .perk-icon-fallback {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 4px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: #fff;
 }
@@ -328,8 +329,8 @@ body {
 }
 
 .level-dot {
-  width: 6px;
-  height: 6px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: #333;
   border: 1px solid #555;

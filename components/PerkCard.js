@@ -75,9 +75,13 @@ function PerkCard({ perk, level, onAdd }) {
   if (isMaxed) classNames += " is-maxed";
 
   return (
-    <div className={classNames} onClick={handleClick}>
+    <div
+      className={classNames}
+      onClick={handleClick}
+      style={{ borderLeftColor: RARITY_COLORS[perk.rarity] }}
+    >
       <div className="perk-card-top">
-        <PerkIcon icon={perk.icon} name={perk.name} rarity={perk.rarity} size={36} />
+        <PerkIcon icon={perk.icon} name={perk.name} rarity={perk.rarity} size={32} />
         <div className="perk-card-info">
           <div
             className="perk-card-name"
