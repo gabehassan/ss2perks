@@ -63,10 +63,11 @@ body {
 }
 
 .app-header h1 {
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--legendary);
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px rgba(255,215,0,0.3);
 }
 
 .app-header h1 span {
@@ -126,14 +127,15 @@ body {
   padding: 10px 12px;
   border-bottom: 1px solid var(--border);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-dim);
+  letter-spacing: 1.5px;
+  color: #bbb;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-shrink: 0;
+  background: linear-gradient(180deg, #1e1e1e 0%, #1a1a1a 100%);
 }
 
 .panel-scroll {
@@ -285,20 +287,22 @@ body {
 }
 
 .perk-card-name {
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  text-shadow: 0 0 8px rgba(255,255,255,0.1);
 }
 
 .perk-card-desc {
   font-size: 10px;
-  color: var(--text-dim);
+  color: #666;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: 1px;
+  margin-top: 2px;
+  font-style: italic;
 }
 
 .perk-card-preview {
@@ -311,10 +315,12 @@ body {
 .perk-card-preview .mod-tag {
   font-size: 10px;
   font-weight: 600;
-  padding: 1px 4px;
+  padding: 1px 5px;
   border-radius: 2px;
-  background: rgba(255,255,255,0.05);
 }
+.perk-card-preview .mod-tag.positive { background: rgba(76,175,80,0.12); }
+.perk-card-preview .mod-tag.negative { background: rgba(244,67,54,0.12); }
+.perk-card-preview .mod-tag.neutral { background: rgba(255,255,255,0.05); }
 
 .perk-card-footer {
   display: flex;
@@ -435,14 +441,15 @@ body {
 }
 
 .build-perk-name {
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(255,255,255,0.08);
 }
 
 .build-perk-desc {
   font-size: 11px;
-  color: var(--text-dim);
-  margin-top: 2px;
+  color: #777;
+  margin-top: 3px;
   line-height: 1.3;
 }
 
@@ -458,8 +465,10 @@ body {
   font-weight: 600;
   padding: 1px 5px;
   border-radius: 2px;
-  background: rgba(255,255,255,0.05);
 }
+.build-perk-mods .mod-tag.positive { background: rgba(76,175,80,0.12); }
+.build-perk-mods .mod-tag.negative { background: rgba(244,67,54,0.12); }
+.build-perk-mods .mod-tag.neutral { background: rgba(255,255,255,0.05); }
 
 .build-perk-controls {
   display: flex;
@@ -533,9 +542,10 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: var(--text-muted);
+  color: #7a7a7a;
   padding: 10px 12px 4px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid #252525;
+  background: linear-gradient(90deg, rgba(255,255,255,0.02) 0%, transparent 100%);
 }
 
 .stat-row {
@@ -562,13 +572,14 @@ body {
 }
 
 .stat-value {
-  font-weight: 600;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
   transition: color 0.15s;
+  font-size: 14px;
 }
 
-.stat-value.positive { color: var(--positive); }
-.stat-value.negative { color: var(--negative); }
+.stat-value.positive { color: var(--positive); text-shadow: 0 0 6px rgba(76,175,80,0.3); }
+.stat-value.negative { color: var(--negative); text-shadow: 0 0 6px rgba(244,67,54,0.3); }
 
 /* Pulse animation */
 @keyframes statPulse {
@@ -637,9 +648,10 @@ body {
 }
 
 .boss-stat-value {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 700;
   margin-top: 2px;
+  font-variant-numeric: tabular-nums;
 }
 
 /* Responsive */
