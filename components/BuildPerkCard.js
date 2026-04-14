@@ -58,7 +58,6 @@ function BuildPerkCard({ perk, level, onRemove, onSetLevel }) {
       if (!mod.values) continue;
       const val = mod.values[String(level)];
       if (val === undefined) continue;
-      if (!(mod.stat in BASE_STATS)) continue;
       const label = getStatShortLabel(mod.stat);
       const fmt = formatModPreview(mod.stat, mod.type, val);
       modEffects.push({ label, ...fmt });

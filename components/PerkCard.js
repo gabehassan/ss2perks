@@ -64,8 +64,6 @@ function PerkCard({ perk, level, onAdd }) {
       if (!mod.values) continue;
       const val = mod.values[String(previewLevel)];
       if (val === undefined) continue;
-      // Only show stats that are in BASE_STATS (trackable)
-      if (!(mod.stat in BASE_STATS)) continue;
       const label = getStatShortLabel(mod.stat);
       const fmt = formatModPreview(mod.stat, mod.type, val);
       modPreviews.push({ label, ...fmt });

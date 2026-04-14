@@ -175,22 +175,26 @@ body {
 }
 
 .filter-pill {
-  padding: 4px 10px;
-  border-radius: 6px;
+  padding: 5px 12px;
+  border-radius: 8px;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
-  border: 1px solid transparent;
+  border: 1.5px solid var(--border);
   transition: all 0.15s;
-  opacity: 0.35;
   user-select: none;
+  color: var(--text-muted);
+  background: transparent;
 }
 .filter-pill.active {
-  opacity: 1;
   border-color: currentColor;
-  background: color-mix(in srgb, currentColor 15%, transparent);
+  color: inherit;
+  background: color-mix(in srgb, currentColor 18%, transparent);
 }
-.filter-pill:hover { opacity: 0.75; }
+.filter-pill:hover {
+  border-color: #444;
+  color: var(--text-dim);
+}
 
 .type-filters {
   padding: 6px 12px;
@@ -251,8 +255,8 @@ body {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 .perk-card.in-build { border-color: #444; }
-.perk-card.is-curse { background: #1a1212; }
-.perk-card.is-curse:hover { background: #221818; }
+.perk-card.is-curse { background: #19141b; border-color: #352030; }
+.perk-card.is-curse:hover { background: #1f1822; }
 .perk-card.is-disabled { opacity: 0.45; }
 .perk-card.is-maxed { border-color: var(--legendary); }
 

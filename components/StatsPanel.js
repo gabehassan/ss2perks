@@ -68,7 +68,7 @@ export default function StatsPanel({ stats }) {
     return groups;
   }, [stats]);
 
-  const sectionOrder = ["COMBAT", "BULLET", "SURVIVAL", "MOBILITY", "ELEMENTAL", "RARITY"];
+  const sectionOrder = ["COMBAT", "SURVIVAL", "BULLET", "MOBILITY", "ELEMENTAL", "EXPLOSIONS", "MISC", "RARITY"];
   const prev = prevStats.current;
 
   return (
