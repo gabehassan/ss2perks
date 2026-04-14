@@ -573,6 +573,7 @@ body {
   align-items: center;
   gap: 6px;
   color: var(--text-dim);
+  font-weight: 500;
 }
 
 .stat-icon {

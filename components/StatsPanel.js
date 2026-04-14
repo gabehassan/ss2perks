@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useRef, useEffect, useState } from "react";
-import { STAT_DISPLAY, BASE_STATS } from "../lib/constants";
+import { STAT_DISPLAY, BASE_STATS, STAT_LABEL_COLORS } from "../lib/constants";
 import { formatStat, getStatDirection } from "../lib/engine";
 import BossSection from "./BossSection";
 
@@ -31,9 +31,11 @@ function StatRow({ config, value, prevValue }) {
   const formatted = formatStat(value, config.format, base);
   const dir = getStatDirection(value, config.format, base, config.inverted);
 
+  const labelColor = STAT_LABEL_COLORS[config.key];
+
   return (
     <div className={`stat-row ${pulseClass}`}>
-      <div className="stat-label">
+      <div className="stat-label" style={labelColor ? { color: labelColor } : undefined}>
         <span className="stat-icon">{config.icon}</span>
         <span>{config.label}</span>
       </div>
